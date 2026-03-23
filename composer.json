@@ -1,0 +1,28 @@
+{
+    "name": "ibswebco/sprint-php",
+    "description": "Il client ufficiale PHP per le API Sprint",
+    "type": "library",
+    "require": {
+        "php": "~8.1 || ~8.2|| ~8.3 || ~8.4",
+        "guzzlehttp/guzzle": "^7.10"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Simonetti",
+            "email": "info@ibssas.it"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Sprint\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "src/",
+            "tests/"
+        ]
+    },
+    "minimum-stability": "stable"
+}
