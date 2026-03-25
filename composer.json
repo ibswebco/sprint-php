@@ -1,11 +1,16 @@
 {
     "name": "ibswebco/sprint-php",
     "description": "Il client ufficiale PHP per le API Sprint",
+    "keywords": [
+        "sprint",
+        "php",
+        "sdk",
+        "ibswebco",
+        "sprint-php",
+        "speedyco"
+    ],
+    "homepage": "https://github.com/ibswebco/sprint-php",
     "type": "library",
-    "require": {
-        "php": "~8.1 || ~8.2|| ~8.3 || ~8.4",
-        "guzzlehttp/guzzle": "^7.10"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +18,14 @@
             "email": "info@ibssas.it"
         }
     ],
+    "require": {
+        "php": "~8.1 || ~8.2|| ~8.3 || ~8.4",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.4",
+        "vlucas/phpdotenv": "^5.6"
+    },
     "autoload": {
         "psr-0": {
             "Sprint\\": "src/"
@@ -24,5 +37,15 @@
             "tests/"
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
